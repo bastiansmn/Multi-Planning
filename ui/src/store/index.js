@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-// import api from "@/scripts/API.js"
 
 Vue.use(Vuex)
 
@@ -106,49 +105,6 @@ export default new Vuex.Store({
         }
         date = new Date(year + "-" + month + "-" + day);
       }
-
-      /*
-      // TODO : Manage to create a component for each Event in the GETs JSON.
-      // Request API events
-      api.getEvents().then(response => {
-        response.data.forEach(elements => {
-          const day = document.getElementById((elements.day < 10 ? "0" + elements.day : elements.day) + "/" + (elements.month < 10 ? "0" + elements.month : elements.month) + "/" + elements.year);
-
-          if (day !== null) {
-            const gradients = [
-              {
-                gradient: "linear-gradient(117deg, rgba(0,233,236,1) 0%, rgba(3,200,113,1) 100%)",
-                color: "#00ffff"
-              },
-              {
-                gradient: "linear-gradient(117deg, rgba(255,238,0,1) 0%, rgba(255,181,0,1) 100%)",
-                color: "#ffff00"
-              },
-              {
-                gradient: "linear-gradient(117deg, rgba(245,67,84,1) 0%, rgba(176,0,130,1) 100%)",
-                color: "#ff0000"
-              },
-              {
-                gradient: "linear-gradient(117deg, rgba(208,1,254,1) 0%, rgba(34,12,228,1) 100%)",
-                color: "#0000ff"
-              }
-            ];
-
-            let grad = "linear-gradient(117deg, rgba(0,255,255,1) 0%, rgba(3,200,113,1) 100%)";
-            gradients.forEach(item => {
-              if (item.color === elements.color)
-                grad = item.gradient;
-            })
-            const height = elements.duration - 8;
-            const translateY = (elements.hour - 1)*60 + elements.minute;
-
-            let endHour = (elements.hour + (Math.ceil(elements.duration / 60) - 1) + (elements.minute + (elements.duration % 60) >= 60 ? 1 : 0)) + ":" + (((elements.minute + (elements.duration % 60)) % 60) < 10 ? "0" + (elements.minute + (elements.duration % 60)) % 60 : (elements.minute + (elements.duration % 60)) % 60);
-
-            day.innerHTML += ("<div class='component' style='background: "+ grad +"; transform: translateY("+ translateY +"px); height: "+ height +"px'>"+ elements.name +"<br>" + elements.hour + ":" + (elements.minute < 10 ? "0" + elements.minute : elements.minute) +" - " + endHour + "</div>");
-          }
-        });
-      });
-       */
     }
   },
   actions: {

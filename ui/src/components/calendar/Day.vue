@@ -1,5 +1,12 @@
 <template>
    <div class="Day" :id="completeDate">
+      <Event v-for="event in weekEvents"
+             :color="event.color"
+             :duration="event.duration"
+             :hour="event.hour"
+             :name="event.name"
+             :key="event"/>
+
       <div class="hour">
          <div class="quarter"></div>
          <div class="quarter"></div>
@@ -150,14 +157,37 @@
 </template>
 
 <script>
+import Event from "@/components/calendar/event/Event";
+import api from "@/scripts/API";
 
 export default {
    name: "Day",
+   components: {
+      Event,
+   },
    props: {
       completeDate: {
          type: String,
          required: true
+      },
+      events: {
+         type: [],
+         required: true,
+         default: []
       }
+   },
+   data: function () {
+      return {
+         weekEvents: [] // Stores the JSON returned by each API call on the getEvents(String date) Java function
+      }
+   },
+   mounted: function () {
+      // TODO : get events of the day from api
+      // TODO : Manage to create a component for each Event in the GETs JSON.
+      // Request API events
+      api.getEvents(this.completeDate).then(response => {
+         this.weekEvents = response.data;
+      });
    }
 }
 </script>
@@ -165,7 +195,6 @@ export default {
 <style scoped>
 span, h1 {
    color: #707070;
-
 }
 
 .Day {

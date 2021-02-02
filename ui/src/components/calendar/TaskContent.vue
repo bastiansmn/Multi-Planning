@@ -1,9 +1,6 @@
 <template>
    <div class="TaskContent">
       <div v-if="task.length !== 0" class="task">
-         <!-- <ul style="list-style: none">
-            <li v-for="items in tasks" :key="items.title">{{ items.title }}</li>
-         </ul> -->
          ({{ task.length }})
       </div>
       <div v-else class="add">
@@ -18,18 +15,7 @@ export default {
    data: function () {
       return {
          task: [
-            {
-               nom: "qldqbdqd"
-            },
-            {
-               nom: "qldqbdqd"
-            },
-            {
-               nom: "qldqbdqd"
-            },
-            {
-               nom: "qldqbdqd"
-            },
+
          ],
          image: "/assets/add.png"
       };

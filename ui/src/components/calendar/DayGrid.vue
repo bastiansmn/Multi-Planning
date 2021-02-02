@@ -3,7 +3,7 @@
       <div class="scrollDayGrid">
          <Hours/>
          <div class="dayContent">
-            <Day v-for="items in getWeek" :key="items.date.toLocaleDateString()" :complete-date="items.date.toLocaleDateString()"/>
+            <Day v-for="items in getWeek" :key="items.date.toLocaleDateString()" :complete-date="items.date.toLocaleDateString()" events=""/>
          </div>
       </div>
    </div>
@@ -20,16 +20,12 @@ export default {
       Hours,
       Day,
    },
-   props: {
-
-   },
    computed: {
       ...mapGetters(['getWeek'])
    },
    mounted() {
-      console.log("cc");
       document.querySelector(".DayGrid").scroll({
-         top: 400,
+         top: 410,
          left: 0,
          behavior: 'smooth',
       });

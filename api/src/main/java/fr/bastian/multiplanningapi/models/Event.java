@@ -6,6 +6,7 @@ import java.util.UUID;
 public class Event {
 
    private final UUID ID;
+   private final UUID belongTo;
 
    private String name;
    private String color;
@@ -19,10 +20,11 @@ public class Event {
 
    private int duration;
 
-   public Event(String name, int day, int month, int year, int hour, int minute, int duration) {
+   public Event(UUID belongTo , String name, int day, int month, int year, int hour, int minute, int duration) {
 
       // TODO : Generate UUID if not in DB
       this.ID = UUID.randomUUID();
+      this.belongTo = belongTo;
 
       this.color = "#"+Integer.toHexString(Color.CYAN.getRGB()).substring(2);
       this.name = name;
@@ -36,10 +38,11 @@ public class Event {
       this.duration = duration;
    }
 
-   public Event(String name, int day, int month, int year, int hour, int minute, int duration, String color) {
+   public Event(UUID belongTo , String name, int day, int month, int year, int hour, int minute, int duration, String color) {
 
       // TODO : Generate UUID if not in DB
       this.ID = UUID.randomUUID();
+      this.belongTo = belongTo;
 
       this.color = color;
       this.name = name;

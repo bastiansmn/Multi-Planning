@@ -6,7 +6,8 @@ const AXIOS = axios.create({
 })
 
 export default {
-    getEvents() {
-        return AXIOS.get("/api/events");
+    getEvents(date) {
+        // TODO : get the events from the user UUID (should be in cookies or smtg)
+        return AXIOS.get(`/api/events?date=${date}`);
     }
 }
