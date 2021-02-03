@@ -3,7 +3,7 @@
       <div class="scrollDayGrid">
          <Hours/>
          <div class="dayContent">
-            <Day v-for="items in getWeek" :key="items.date.toLocaleDateString()" :complete-date="items.date.toLocaleDateString()" events=""/>
+            <Day v-for="items in getWeek" :key="items.date.toLocaleDateString()" :complete-date="items.date.toLocaleDateString()"/>
          </div>
       </div>
    </div>
@@ -26,7 +26,6 @@ export default {
    mounted() {
       document.querySelector(".DayGrid").scroll({
          top: 410,
-         left: 0,
          behavior: 'smooth',
       });
    }
@@ -49,8 +48,7 @@ export default {
    overflow-y: hidden;
    overflow-x: hidden;
    width: 100%;
-   max-height: 1500px;
-   height: max(100vh, 1500px);
+   height: max(100vh, 1462px);
    display: flex;
    flex-direction: row;
 }
@@ -68,7 +66,7 @@ export default {
 .dayContent {
    padding-top: 11px;
    padding-bottom: 11px;
-   max-height: 1500px;
+   max-height: 1440px;
    width: 95%;
    display: flex;
    flex-direction: row;

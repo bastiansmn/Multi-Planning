@@ -1,6 +1,13 @@
 <template>
-   <div class="Event" :class="getGradientColor() + '-gradient'">
-      <!-- TODO : Show main event infos -->
+   <div class="Event" :class="getGradientColor() + '-gradient'" :style="eventStyle">
+      <div class="eventInfos" v-if="this.duration >= 60">
+         <span>{{ this.name }}</span>
+         <span>{{ String(this.hour).padStart(2, '0') }}:{{ String(this.minute).padStart(2, '0') }} -
+            {{ String(this.hour + Math.trunc((this.duration / 60)) + (this.duration % 60 + this.minute > 60 ? 1 : 0)).padStart(2, '0') }}:{{ String((this.minute + (this.duration % 60)) % 60).padStart(2, '0') }}</span>
+      </div>
+      <div class="eventInfos" v-else-if="this.duration < 60 && this.duration >= 30">
+         <span>{{ this.name }}</span>
+      </div>
    </div>
 </template>
 
@@ -13,7 +20,11 @@ export default {
          required: true,
       },
       hour: {
-         type: String,
+         type: Number,
+         required: true
+      },
+      minute: {
+         type: Number,
          required: true
       },
       color: {
@@ -39,36 +50,32 @@ export default {
             case "#ffff00":
                return "yellow";
          }
-      }
+      },
    },
    data: function () {
       return {
-
+         eventStyle: {
+            height: this.duration-10 +'px',
+            top: 4 + (this.hour * 60) + this.minute + 'px',
+            borderRadius: Math.log(this.duration) * 1.7 + 'px' // Adjust the factor to round events angles
+         }
       };
    },
-   mounted: function () {
-
-      /*
-      const translateY = (this.hour - 1) * 60 + this.minute;
-
-      let endHour = (this.hour + (Math.ceil(this.duration / 60) - 1) + (this.minute + (this.duration % 60) >= 60 ? 1 : 0)) + ":" + (((this.minute + (this.duration % 60)) % 60) < 10 ? "0" + (this.minute + (this.duration % 60)) % 60 : (this.minute + (this.duration % 60)) % 60);
-
-      day.innerHTML += ("<div class="component' style='background: " + grad + "; transform: translateY(" + translateY + "px); height: " + height + "px'>" + this.name + "<br>" + this.hour + ":" + (this.minute < 10 ? "0" + this.minute : this.minute) + " - " + endHour + "</div>");
-       */
-   }
 }
 </script>
 
 <style scoped>
 .Event {
+   width: 85%;
    position: absolute;
-   height: 110px;
-   color: white;
    display: flex;
    justify-content: center;
    align-items: center;
-   font-size: 14px;
-   font-weight: 500;
+   cursor: pointer;
+}
+
+.Event:hover {
+   transform: scale(1.03);
 }
 
 .red-gradient {
@@ -85,5 +92,15 @@ export default {
 
 .blue-gradient {
    background: linear-gradient(117deg, rgba(208,1,254,1) 0%, rgba(34,12,228,1) 100%);
+}
+
+.eventInfos {
+   color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 14px;
+   font-weight: 600;
 }
 </style>

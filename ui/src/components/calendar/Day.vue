@@ -151,8 +151,9 @@
              :color="event.color"
              :duration="event.duration"
              :hour="event.hour"
+             :minute="event.minute"
              :name="event.name"
-             :key="event"/>
+             :key="event.id"/>
    </div>
 </template>
 
@@ -176,9 +177,7 @@ export default {
          weekEvents: [] // Stores the JSON returned by each API call on the getEvents(String date) Java function
       }
    },
-   mounted: function () {
-      // TODO : get events of the day from api
-      // TODO : Manage to create a component for each Event in the GETs JSON.
+   beforeMount: function () {
       // Request API events
       api.getEvents(this.completeDate).then(response => {
          this.weekEvents = response.data;
@@ -193,6 +192,7 @@ span, h1 {
 }
 
 .Day {
+   position: relative;
    width: 15%;
    display: flex;
    flex-direction: column;
@@ -206,7 +206,6 @@ span, h1 {
    align-items: center;
    flex-direction: column;
    width: 75%;
-   margin: auto;
 }
 
 .hour::before {

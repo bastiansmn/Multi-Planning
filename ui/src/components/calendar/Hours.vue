@@ -38,8 +38,8 @@ export default {
 .Hours {
    width: 5%;
    min-width: 70px;
-   height: 1500px;
-   max-height: 1500px;
+   height: 100%;
+   max-height: 1462px;
    display: flex;
    flex-direction: column;
    align-items: center;
