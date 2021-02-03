@@ -1,158 +1,158 @@
 <template>
    <div class="Day" :id="completeDate">
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+         <div class="quarter"></div>
+      </div>
+      <div class="hour">
+      </div>
+
       <Event v-for="event in weekEvents"
              :color="event.color"
              :duration="event.duration"
              :hour="event.hour"
              :name="event.name"
              :key="event"/>
-
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-         <div class="quarter"></div>
-      </div>
-      <div class="hour">
-      </div>
    </div>
 </template>
 
@@ -170,11 +170,6 @@ export default {
          type: String,
          required: true
       },
-      events: {
-         type: [],
-         required: true,
-         default: []
-      }
    },
    data: function () {
       return {

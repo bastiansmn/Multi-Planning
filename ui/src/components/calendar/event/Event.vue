@@ -32,6 +32,12 @@ export default {
          switch (this.color) {
             case "#00ffff":
                return "cyan";
+            case "#ff0000":
+               return "red";
+            case "#0000ff":
+               return "blue";
+            case "#ffff00":
+               return "yellow";
          }
       }
    },
